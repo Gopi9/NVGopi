@@ -1,0 +1,27 @@
+https://docs.google.com/document/d/1ZeKOU4QU294RVN1my5cModF4iu_PkWhRgOJd7WdIssw/edit?usp=sharing
+
+git init (To create a hidden file in git floder.)
+git config --global user.name "gopi" (To configure&create a user name)
+git config --global user.email "gopi@gmail.com" (To configure & create a user email)
+git config --list (To check the wheater the user name & email is configured or not)
+ls -a (List all the hidden files)
+touch file1 (To create a empty file)
+git status (To check the Git status wheqater it is in the work space stage or index stage or repository stage)
+{If the file displays in the red colour then it is in the work space stage}
+git add file1 (To move the created file from work space to index stage)
+git status {If the file displays in the green colour then it is in the index stage}
+git commit  -m "gopi" (To move the created file from the index stage to repository)
+git log (to check weather the file is moved to repository or not)
+git status
+git show <commitid> (To display the total files in the commit id)
+git hub or remote repository 
+git push -u origin master (To move the created files from local repositories to remote repositories or Git Hub)
+git pill -u origin madter (To move the created files from remote repositories or Git Hub to local repositories)
+----------------------------------------------------------------------------------------------------------------
+Create an account in Git Hub then create an organization in the git hub(ex:Gopi9) & then create a Remote repository name (Ex:NVGopi).
+Now make key generation in the git bash shell. Venkat Namburi@DESKTOP-UN4811Q MINGW64 ~ $ <ssh-keygen>
+then use the cat command to view the file of id_rsa.pub in diretory of ~/.ssh ($ <cat id_rsa.pub>) then copy the file which is a key and then paste it in the git hub SSH and GPG keys under settings.
+NOW we can view the files in the Git Hub or Remote Repository.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
