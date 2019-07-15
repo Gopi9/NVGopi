@@ -1,6 +1,6 @@
-pipeline {
+npipeline {
     agent {
-        Label "windows"
+        Label "jenkins"
     }
 
     stages {
