@@ -1,7 +1,5 @@
 npipeline {
-    agent {
-        Label "jenkins"
-    }
+    agent any
 
     stages {
         stage('Build') {
