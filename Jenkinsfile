@@ -4,17 +4,17 @@ npipeline {
     stages {
         stage('Build') {
             steps {
-                write-host 'Building..'
+                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-                write-host 'Testing..'
+                echo 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                write-host 'Deploying....'
+                echo 'Deploying....'
             }
         }
     }
