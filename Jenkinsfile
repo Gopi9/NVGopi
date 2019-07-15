@@ -1,20 +1,22 @@
 pipeline {
-    agent any
+    agent {
+        Label "windows"
+    }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                write-host 'Building..'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                write-host 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                write-host 'Deploying....'
             }
         }
     }
