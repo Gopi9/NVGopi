@@ -1,0 +1,27 @@
+PIVOTAL CLOUD FOUNDRY CLI COMMANDS:
+cf help------------------------> which gives the complete command book of pcf
+cf login----------------------->a https://api.run.pivotal.io  which will login into pws
+cf apps------------------------> To give the list of apps in the org->space
+cf push appname----------------> it pushes the app to the pws (it creates the app and it pushes the app into pws)
+cf delete -r appname-----------> It deletes the app (*-r means it removes the routes)
+cf logs app name –recent-------> show the recent logs
+cf logs app name---------------> to get live logs data
+cf marketplace-----------------> to view the marketplace of the pcf
+cf marketplace -s servicename--> to get available plans of the marketplace services
+cf create-service servicename serviceplan serviceinstancename-> To create the service instance with the plan of service
+cf bind-service appname serviceinstancename----> To bind the service to the app
+cf unbind-service appname serviceinstancename--> To unbind the service to the app
+cf restage appname-------------> To restage the app
+cf restart appname-------------> To restart the app
+cf stop appname----------------> to stop the running app
+cf start appname---------------> To start the stopped app
+cf services--------------------> To view the services (which service is bound to which app)
+cf scale appname -i no.of instances------------> To increase the app instances
+cf app appname-----------------> To check the status of the app
+cf scale appname -m memorylimit (eg: 1g,256m)--> To increase the memory limit for each app
+cf scale appname -k memorylimit (eg: 1g,256m)--> To decrease the memory limit for each app
+cf target----------------------> It shows the details of API endpoint, version, user, org, space
+cf delete-service servicename--> It deletes the service(*need to unbind the app with the service first)
+cf delete-service appname servicename----------> It deletes the app with service
+cf routes----------------------> It shows all active routes in current space
+*cf delete-route my-domain.com --hostname my-example-app
