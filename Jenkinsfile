@@ -1,10 +1,10 @@
 pipeline {
-    agent {
-        label 'master'
     }
     node {
       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'fortify']], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'b8bc3a8d-5231-4f5c-8b67-dd04540c2680', url: 'https://github.cms.gov/FFMTools/ffm-fortify.git']]])
     }
+    agent {
+        label 'master'
     stages {
         stage('Fortify Scala-Translation') {
             steps {
