@@ -2,7 +2,7 @@ pipeline {
     agent any
     	    
     stages {
-	stage('checkout') {
+	stage('checkout-fortify') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'fortify']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.cms.gov/FFMTools/ffm-fortify.git']]])
                 sh "ls"   
